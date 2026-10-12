@@ -35,6 +35,7 @@ type ChallengeModalProps = {
 
   hangmanGuessedLetters?: string[];
   setHangmanGuessedLetters?: (value: string[]) => void;
+   onWrongHangmanGuess: () => void;
 };
 
 export default function ChallengeModal({
@@ -566,7 +567,7 @@ export default function ChallengeModal({
 
     <div className="mb-1 text-[10px] font-black text-yellow-300">
 
-      CLUE
+      HINT
 
     </div>
 
