@@ -1,0 +1,25 @@
+{
+  "pages": {
+    "/_app": []
+  },
+  "devFiles": [],
+  "polyfillFiles": [
+    "static/chunks/5dbd5_next_dist_build_polyfills_polyfill-nomodule.js"
+  ],
+  "lowPriorityFiles": [
+    "static/development/_ssgManifest.js",
+    "static/development/_buildManifest.js"
+  ],
+  "rootMainFiles": [
+    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_69f5ed58._.js",
+    "static/chunks/5dbd5_next_dist_compiled_react-dom_9069b8a9._.js",
+    "static/chunks/5dbd5_next_dist_compiled_react-server-dom-turbopack_98318d10._.js",
+    "static/chunks/5dbd5_next_dist_compiled_next-devtools_index_bae35de7.js",
+    "static/chunks/5dbd5_next_dist_compiled_98a32b70._.js",
+    "static/chunks/5dbd5_next_dist_client_ac45cfe7._.js",
+    "static/chunks/5dbd5_next_dist_ed6ab1cd._.js",
+    "static/chunks/5dbd5_@swc_helpers_cjs_2e1a12a6._.js",
+    "static/chunks/Downloads_healthcare-english-game_healthcare-english-game_a0ff3932._.js",
+    "static/chunks/turbopack-Downloads_healthcare-english-game_healthcare-english-game_e284f485._.js"
+  ]
+}

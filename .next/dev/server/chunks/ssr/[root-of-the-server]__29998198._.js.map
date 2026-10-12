@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 20, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/kj/Downloads/healthcare-english-game/healthcare-english-game/app/page.tsx"],"sourcesContent":["import Game from '@/components/Game';\nexport default function Home() { return <Game />; }\n"],"names":[],"mappings":";;;;;AAAA;;;AACe,SAAS;IAAS,qBAAO,6TAAC,6MAAI;;;;;AAAK"}}]
+}
