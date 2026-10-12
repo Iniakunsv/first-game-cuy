@@ -8,8 +8,8 @@ type ChallengeModalProps = {
   index: number;
   total: number;
 
-  choice: number | null;
-  setChoice: (value: number | null) => void;
+  choice: string | number | null;
+  setChoice: (value: string | number | null) => void;
 
   shortAnswer: string;
   setShortAnswer: (value: string) => void;
