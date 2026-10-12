@@ -26,7 +26,7 @@ import {
   Direction,
 } from '@/data/types';
 
-const SPEED = 0.25;
+const SPEED = 0.5;
 
 export default function Game() {
 
