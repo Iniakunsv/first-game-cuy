@@ -3458,45 +3458,7 @@ if (gameOver) {
 
         <div className="relative aspect-[4/3] h-[100vh] max-h-screen w-auto max-w-screen overflow-hidden border-4 border-[#20272e] bg-[#59606a] shadow-2xl">
 
-        <HUD
-  layout={layout}
-
-  clues={collectedClues.length}
-  clueTotal={clues.length}
-
-  done={solvedInCurrentLayout}
-  total={activeChallenges.length}
-
-  whiteboardDone={solvedWhiteboard}
-  whiteboardTotal={whiteboardChallenges.length}
-
-  drawerDone={solvedDrawer}
-  drawerTotal={drawerChallenges.length}
-
-  drawerUnlocked={drawerUnlocked}
-
-  lives={lives}
-
-  onJournal={() => {
-    setFakeMessage(
-      'CLUE JOURNAL\n\n' +
-      (collectedClues.length > 0
-        ? collectedClues
-            .map((clueId) => {
-              const clue = clues.find(
-                (clueItem) => clueItem.id === clueId
-              );
-
-              return clue
-                ? `• ${clue.letter}`
-                : null;
-            })
-            .filter(Boolean)
-            .join('\n')
-        : 'No clues collected yet.')
-    );
-  }}
-/>
+       <HUD lives={lives} />
           {/* =================================================
               ROOM
               ================================================= */}
