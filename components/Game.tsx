@@ -2364,9 +2364,9 @@ const updateMovement = () => {
           .toLowerCase();
 
       const correctAnswer =
-        currentChallenge.answer
-          .trim()
-          .toLowerCase();
+        String(currentChallenge.answer)
+        .trim()
+        .toLowerCase();
 
 
       if (
