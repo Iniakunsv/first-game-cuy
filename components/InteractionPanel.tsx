@@ -77,7 +77,7 @@ export default function InteractionPanel({
             </p>
 
             <div className="mt-3 text-lg font-black text-yellow-200">
-              {clue.keyword}
+              {clue.letter}
             </div>
 
           </div>
