@@ -56,39 +56,6 @@ export default function Game() {
 
   const [keys, setKeys] =
     useState<Record<string, boolean>>({});
-  
-  const [joystick, setJoystick] = useState({
-    x: 0,
-    y: 0,
-  });
-
-  const updateJoystick = (
-  event: React.PointerEvent<HTMLDivElement>
-) => {
-  const rect = event.currentTarget.getBoundingClientRect();
-
-  const radius = rect.width / 2;
-  const maxDistance = radius * 0.65;
-
-  const centerX = rect.left + radius;
-  const centerY = rect.top + radius;
-
-  let x = (event.clientX - centerX) / maxDistance;
-  let y = (event.clientY - centerY) / maxDistance;
-
-  const distance = Math.hypot(x, y);
-
-  if (distance > 1) {
-    x /= distance;
-    y /= distance;
-  }
-
-  setJoystick({ x, y });
-};
-
-const stopJoystick = () => {
-  setJoystick({ x: 0, y: 0 });
-};
 
   const [collectedClues, setCollectedClues] =
     useState<string[]>([]);
@@ -1850,7 +1817,6 @@ const updateMovement = () => {
 
   }, [
     keys,
-    joystick,
     tryMove,
     challenge,
     fakeMessage,
@@ -3792,36 +3758,109 @@ if (gameOver) {
           </div>
 
           
-{/* MOBILE VIRTUAL JOYSTICK */}
+{/* MOBILE D-PAD */}
 <div
-  className="absolute bottom-5 left-4 z-[70] h-28 w-28 touch-none select-none rounded-full border-2 border-white/30 bg-black/25 md:hidden"
+  className="absolute bottom-5 left-4 z-[70] grid grid-cols-3 grid-rows-3 gap-1 md:hidden select-none"
   style={{ touchAction: 'none' }}
-  onPointerDown={(event) => {
-    event.preventDefault();
-    event.currentTarget.setPointerCapture(event.pointerId);
-    updateJoystick(event);
-  }}
-  onPointerMove={(event) => {
-    if (event.buttons !== 0) {
-      updateJoystick(event);
-    }
-  }}
-  onPointerUp={stopJoystick}
-  onPointerCancel={stopJoystick}
-  onLostPointerCapture={stopJoystick}
-  aria-label="Movement joystick"
 >
-  <div className="pointer-events-none absolute inset-0 flex items-center justify-center text-[9px] font-black text-white/50">
-    MOVE
+  {/* UP */}
+  <button
+    type="button"
+    aria-label="Move up"
+    className="col-start-2 row-start-1 flex h-12 w-12 items-center justify-center rounded-lg border-2 border-white/30 bg-[#30363f]/95 text-white active:bg-cyan-500/80"
+    onPointerDown={(event) => {
+      event.preventDefault();
+      event.currentTarget.setPointerCapture(event.pointerId);
+      setKeys((value) => ({ ...value, arrowup: true }));
+    }}
+    onPointerUp={() =>
+      setKeys((value) => ({ ...value, arrowup: false }))
+    }
+    onPointerCancel={() =>
+      setKeys((value) => ({ ...value, arrowup: false }))
+    }
+    onLostPointerCapture={() =>
+      setKeys((value) => ({ ...value, arrowup: false }))
+    }
+  >
+    ▲
+  </button>
+
+  {/* LEFT */}
+  <button
+    type="button"
+    aria-label="Move left"
+    className="col-start-1 row-start-2 flex h-12 w-12 items-center justify-center rounded-lg border-2 border-white/30 bg-[#30363f]/95 text-white active:bg-cyan-500/80"
+    onPointerDown={(event) => {
+      event.preventDefault();
+      event.currentTarget.setPointerCapture(event.pointerId);
+      setKeys((value) => ({ ...value, arrowleft: true }));
+    }}
+    onPointerUp={() =>
+      setKeys((value) => ({ ...value, arrowleft: false }))
+    }
+    onPointerCancel={() =>
+      setKeys((value) => ({ ...value, arrowleft: false }))
+    }
+    onLostPointerCapture={() =>
+      setKeys((value) => ({ ...value, arrowleft: false }))
+    }
+  >
+    ◀
+  </button>
+
+  {/* CENTER */}
+  <div className="col-start-2 row-start-2 flex h-12 w-12 items-center justify-center rounded-lg bg-black/40 text-xs font-bold text-white/50">
+    +
   </div>
 
-  <div
-    className="pointer-events-none absolute left-1/2 top-1/2 h-11 w-11 rounded-full border-2 border-white/50 bg-white/40"
-    style={{
-      transform: `translate(calc(-50% + ${joystick.x * 35}px), calc(-50% + ${joystick.y * 35}px))`,
+  {/* RIGHT */}
+  <button
+    type="button"
+    aria-label="Move right"
+    className="col-start-3 row-start-2 flex h-12 w-12 items-center justify-center rounded-lg border-2 border-white/30 bg-[#30363f]/95 text-white active:bg-cyan-500/80"
+    onPointerDown={(event) => {
+      event.preventDefault();
+      event.currentTarget.setPointerCapture(event.pointerId);
+      setKeys((value) => ({ ...value, arrowright: true }));
     }}
-  />
+    onPointerUp={() =>
+      setKeys((value) => ({ ...value, arrowright: false }))
+    }
+    onPointerCancel={() =>
+      setKeys((value) => ({ ...value, arrowright: false }))
+    }
+    onLostPointerCapture={() =>
+      setKeys((value) => ({ ...value, arrowright: false }))
+    }
+  >
+    ▶
+  </button>
+
+  {/* DOWN */}
+  <button
+    type="button"
+    aria-label="Move down"
+    className="col-start-2 row-start-3 flex h-12 w-12 items-center justify-center rounded-lg border-2 border-white/30 bg-[#30363f]/95 text-white active:bg-cyan-500/80"
+    onPointerDown={(event) => {
+      event.preventDefault();
+      event.currentTarget.setPointerCapture(event.pointerId);
+      setKeys((value) => ({ ...value, arrowdown: true }));
+    }}
+    onPointerUp={() =>
+      setKeys((value) => ({ ...value, arrowdown: false }))
+    }
+    onPointerCancel={() =>
+      setKeys((value) => ({ ...value, arrowdown: false }))
+    }
+    onLostPointerCapture={() =>
+      setKeys((value) => ({ ...value, arrowdown: false }))
+    }
+  >
+    ▼
+  </button>
 </div>
+
 
 
           {/* =================================================
