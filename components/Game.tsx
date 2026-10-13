@@ -3798,8 +3798,11 @@ if (gameOver) {
 
           
 {/* MOBILE D-PAD */}
+
+{/* MOBILE D-PAD */}
+
 <div
-  className="absolute bottom-5 left-4 z-[70] grid grid-cols-3 grid-rows-3 gap-1 md:hidden select-none"
+  className="mobile-game-dpad absolute bottom-5 left-4 z-[70] grid grid-cols-3 grid-rows-3 gap-1 select-none md:hidden"
   style={{ touchAction: 'none' }}
 >
   {/* UP */}
@@ -3932,7 +3935,7 @@ if (gameOver) {
   !transitioning && (
     <button
       type="button"
-      className="absolute bottom-7 right-4 z-[75] flex h-14 w-20 touch-manipulation items-center justify-center border-2 border-yellow-300 bg-black/65 text-[10px] font-black text-yellow-100 shadow-lg active:scale-95 md:hidden"
+      className="mobile-game-interact absolute bottom-7 right-4 z-[75] flex h-14 w-20 touch-manipulation items-center justify-center border-2 border-yellow-300 bg-black/65 text-[10px] font-black text-yellow-100 shadow-lg active:scale-95 md:hidden"
       onClick={() => {
         window.dispatchEvent(
           new KeyboardEvent('keydown', {
