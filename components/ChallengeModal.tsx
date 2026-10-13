@@ -274,9 +274,10 @@ export default function ChallengeModal({
     onClick={onClose}
     >
 
-      <div className="panel my-auto max-h-[calc(100dvh-1rem)] w-full max-w-xl overflow-y-auto p-3 sm:max-h-[calc(100dvh-2rem)] sm:p-5"
-       onClick={(event) => event.stopPropagation()}
-       >
+      <div
+         className="panel my-auto max-h-[calc(100dvh-0.5rem)] w-full max-w-md overflow-y-auto p-2 text-sm sm:max-h-[calc(100dvh-1rem)] sm:p-4"
+          onClick={(event) => event.stopPropagation()}
+            >
 
         {/* =====================================================
             HEADER
@@ -303,7 +304,7 @@ export default function ChallengeModal({
             QUESTION
         ===================================================== */}
 
-        <h2 className="mt-3 text-lg font-black text-white">
+        <h2 className="mt-2 text-base font-black text-white sm:mt-3 sm:text-lg">
 
           {challenge.question}
 
@@ -354,7 +355,7 @@ export default function ChallengeModal({
               }
               autoFocus
               placeholder="Type your answer..."
-              className="w-full border-2 border-cyan-300 bg-black/70 px-4 py-4 text-center text-lg font-black uppercase tracking-widest text-white outline-none placeholder:text-slate-500 focus:border-yellow-300"
+              className="w-full border-2 border-cyan-300 bg-black/70 px-3 py-2 text-center text-base font-black uppercase tracking-widest text-white outline-none placeholder:text-slate-500 focus:border-yellow-300 sm:px-4 sm:py-4 sm:text-lg"
             />
             
 
@@ -414,7 +415,7 @@ export default function ChallengeModal({
               }
               autoFocus
               placeholder="Type the wrong word..."
-              className="w-full border-2 border-cyan-300 bg-black/70 px-4 py-4 text-center text-lg font-black uppercase tracking-widest text-white outline-none placeholder:text-slate-500 focus:border-yellow-300"
+              className="w-full border-2 border-cyan-300 bg-black/70 px-3 py-2 text-center text-base font-black uppercase tracking-widest text-white outline-none placeholder:text-slate-500 focus:border-yellow-300 sm:px-4 sm:py-4 sm:text-lg"
             />
 
           </div>
