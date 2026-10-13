@@ -26,7 +26,7 @@ import {
   Direction,
 } from '@/data/types';
 
-const SPEED = 0.5;
+const SPEED = 0.25;
 
 export default function Game() {
 
@@ -65,6 +65,30 @@ export default function Game() {
 
   const [solved, setSolved] =
     useState<string[]>([]);
+
+  const [isPortrait, setIsPortrait] = 
+    useState(false);
+  
+  const [zoom, setZoom] = 
+    useState(1);
+
+  useEffect(() => {
+  const checkOrientation = () => {
+    setIsPortrait(
+      window.matchMedia('(max-width: 767px) and (orientation: portrait)').matches
+    );
+  };
+
+  checkOrientation();
+
+  window.addEventListener('resize', checkOrientation);
+  window.addEventListener('orientationchange', checkOrientation);
+
+  return () => {
+    window.removeEventListener('resize', checkOrientation);
+    window.removeEventListener('orientationchange', checkOrientation);
+  };
+}, []);
 
   const [layout3GallonProgress, setLayout3GallonProgress] =
     useState({
@@ -3419,6 +3443,21 @@ if (gameOver) {
   return (
 
     <main className="game-shell fixed inset-0 z-50 flex h-screen w-screen items-center justify-center overflow-hidden">
+      {isPortrait && (
+  <div className="fixed inset-0 z-[200] flex items-center justify-center bg-[#111820] p-6 text-center text-white md:hidden">
+    <div className="max-w-sm">
+      <div className="mb-5 text-5xl">📱 ↻</div>
+
+      <h1 className="text-xl font-black text-cyan-300">
+        PLEASE ROTATE YOUR PHONE
+      </h1>
+
+      <p className="mt-3 text-sm leading-relaxed text-slate-300">
+        Rotate your phone to landscape for a better experience.
+      </p>
+    </div>
+  </div>
+)}
 
       <div className="flex h-full w-full items-center justify-center">
 
