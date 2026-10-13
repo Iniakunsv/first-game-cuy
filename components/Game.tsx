@@ -3451,11 +3451,9 @@ if (gameOver) {
     <div
       className="relative aspect-[4/3] max-h-full max-w-full shrink-0 overflow-hidden border-4 border-[#20272e] bg-[#59606a] shadow-2xl"
       style={{
-  width: 'min(88vw, 117.3333dvh)',
-  aspectRatio: '4 / 3',
-  height: 'auto',
-  maxHeight: '66dvh',
-}}
+        width: 'min(100vw, 133.3333dvh)',
+        height: 'min(100dvh, 75vw)',
+      }}
     >
       {isPortrait && (
   <div className="fixed inset-0 z-[200] flex items-center justify-center bg-[#111820] p-6 text-center text-white md:hidden">
@@ -3809,7 +3807,7 @@ if (gameOver) {
           
 {/* MOBILE D-PAD */}
 <div
-  className="absolute bottom-5 left-4 z-[70] h-28 w-28 touch-none select-none rounded-full border-2 border-white/30 bg-black/25 [@media(hover:none)]:block"
+  className="absolute bottom-5 left-4 z-[70] grid grid-cols-3 grid-rows-3 gap-1 md:hidden select-none"
   style={{ touchAction: 'none' }}
 >
   {/* UP */}
@@ -3942,7 +3940,7 @@ if (gameOver) {
   !transitioning && (
     <button
       type="button"
-      className="absolute bottom-7 right-4 z-[75] flex h-14 w-20 touch-manipulation items-center justify-center border-2 border-yellow-300 bg-black/65 text-[10px] font-black text-yellow-100 shadow-lg active:scale-95 [@media(hover:none)]:block"
+      className="absolute bottom-7 right-4 z-[75] flex h-14 w-20 touch-manipulation items-center justify-center border-2 border-yellow-300 bg-black/65 text-[10px] font-black text-yellow-100 shadow-lg active:scale-95 md:hidden"
       onClick={() => {
         window.dispatchEvent(
           new KeyboardEvent('keydown', {
