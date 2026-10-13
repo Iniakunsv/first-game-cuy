@@ -4110,9 +4110,13 @@ if (gameOver) {
             !challenge &&
             !transitioning && (
 
-              <div className="absolute inset-0 z-[90] flex items-center justify-center bg-black/60 p-6">
+              <div className="absolute inset-0 z-[90] flex items-center justify-center bg-black/60 p-6"
+               onClick={() => setFakeMessage(null)}
+               >
 
-                <div className="w-full max-w-xl border-4 border-[#20272e] bg-[#111820] shadow-2xl">
+                <div className="w-full max-w-xl border-4 border-[#20272e] bg-[#111820] shadow-2xl"
+                onClick={(event) => event.stopPropagation()}
+                >
 
                   <div className="border-b-4 border-cyan-300 bg-black/80 px-5 py-4">
 
