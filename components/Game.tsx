@@ -3801,10 +3801,13 @@ if (gameOver) {
 
 {/* MOBILE D-PAD */}
 
-<div
-  className="mobile-game-dpad absolute bottom-5 left-4 z-[70] grid grid-cols-3 grid-rows-3 gap-1 select-none md:hidden"
-  style={{ touchAction: 'none' }}
->
+{!challenge && (
+  <div
+    className="mobile-game-dpad absolute bottom-5 left-4 z-[70] grid grid-cols-3 grid-rows-3 gap-1 md:hidden select-none"
+    style={{ touchAction: 'none' }}
+  >
+  </div>
+)}
   {/* UP */}
   <button
     type="button"
@@ -3928,7 +3931,8 @@ if (gameOver) {
 
           
 {/* MOBILE INTERACT BUTTON */}
-{nearObj &&
+{!challenge &&
+  nearObj &&
   !challenge &&
   !fakeMessage &&
   !passwordOpen &&
