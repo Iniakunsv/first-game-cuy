@@ -270,14 +270,9 @@ export default function ChallengeModal({
 
 
   return (
-    <div className="absolute inset-0 z-[60] flex items-start justify-center overflow-y-auto bg-black/65 p-2 sm:items-center sm:p-4"
-    onClick={onClose}
-    >
+    <div className="absolute inset-0 z-[60] flex items-start justify-center overflow-y-auto overscroll-contain bg-black/65 p-2 sm:items-center sm:p-4">
 
-      <div
-         className="panel my-auto max-h-[calc(100dvh-0.5rem)] w-full max-w-md overflow-y-auto p-2 text-sm sm:max-h-[calc(100dvh-1rem)] sm:p-4"
-          onClick={(event) => event.stopPropagation()}
-            >
+         <div className="relative my-auto max-h-[calc(100dvh-1rem)] w-full max-w-md overflow-y-auto overscroll-contain border-2 border-cyan-300 bg-[#111820] p-3 sm:max-h-[calc(100dvh-2rem)] sm:max-w-xl sm:p-5">
 
         {/* =====================================================
             HEADER
