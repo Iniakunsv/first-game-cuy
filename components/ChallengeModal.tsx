@@ -270,15 +270,15 @@ export default function ChallengeModal({
 
 
   return (
-    <div className="absolute inset-0 z-[60] flex items-center justify-center bg-black/65 p-4">
+    <div className="absolute inset-0 z-[60] flex items-start justify-center overflow-y-auto bg-black/65 p-2 sm:items-center sm:p-4">
 
-      <div className="panel w-full max-w-xl p-5">
+      <div className="panel my-auto max-h-[calc(100dvh-1rem)] w-full max-w-xl overflow-y-auto p-3 sm:max-h-[calc(100dvh-2rem)] sm:p-5">
 
         {/* =====================================================
             HEADER
         ===================================================== */}
 
-        <div className="flex justify-between text-xs text-cyan-300">
+        <div className="sticky top-0 z-20 flex justify-between bg-slate-950 py-2 text-xs text-cyan-300">
 
           <span>
             CHALLENGE {index} / {total}
