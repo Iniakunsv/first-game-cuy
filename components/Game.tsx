@@ -68,9 +68,6 @@ export default function Game() {
 
   const [isPortrait, setIsPortrait] = 
     useState(false);
-  
-  const [zoom, setZoom] = 
-    useState(1);
 
   useEffect(() => {
   const checkOrientation = () => {
@@ -3442,7 +3439,22 @@ if (gameOver) {
 
   return (
 
-    <main className="game-shell fixed inset-0 z-50 flex h-screen w-screen items-center justify-center overflow-hidden">
+    <main
+  className="game-shell fixed inset-0 z-50 flex h-[100dvh] w-screen items-center justify-center overflow-hidden overscroll-none"
+  style={{
+    touchAction: 'none',
+    WebkitUserSelect: 'none',
+    userSelect: 'none',
+  }}
+>
+  <div className="flex h-full w-full items-center justify-center overflow-hidden">
+    <div
+      className="relative aspect-[4/3] max-h-full max-w-full shrink-0 overflow-hidden border-4 border-[#20272e] bg-[#59606a] shadow-2xl"
+      style={{
+        width: 'min(100vw, 133.3333dvh)',
+        height: 'min(100dvh, 75vw)',
+      }}
+    >
       {isPortrait && (
   <div className="fixed inset-0 z-[200] flex items-center justify-center bg-[#111820] p-6 text-center text-white md:hidden">
     <div className="max-w-sm">
@@ -3458,10 +3470,6 @@ if (gameOver) {
     </div>
   </div>
 )}
-
-      <div className="flex h-full w-full items-center justify-center">
-
-        <div className="relative aspect-[4/3] h-[100vh] max-h-screen w-auto max-w-screen overflow-hidden border-4 border-[#20272e] bg-[#59606a] shadow-2xl">
 
        <HUD lives={lives} />
           {/* =================================================
