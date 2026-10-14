@@ -3797,114 +3797,119 @@ if (gameOver) {
           </div>
 
           
-{/* MOBILE D-PAD */}
 
 {/* MOBILE D-PAD */}
-
 {!challenge && (
   <div
-    className="mobile-game-dpad absolute bottom-5 left-4 z-[70] grid grid-cols-3 grid-rows-3 gap-1 md:hidden select-none"
-    style={{ touchAction: 'none' }}
+    className="mobile-game-dpad absolute bottom-5 left-4 z-[70] grid grid-cols-3 grid-rows-3 gap-1 select-none md:hidden"
+    style={{
+      touchAction: 'none',
+      userSelect: 'none',
+      WebkitUserSelect: 'none',
+      WebkitTouchCallout: 'none',
+    }}
+    onContextMenu={(event) => {
+      event.preventDefault();
+    }}
   >
+    {/* UP */}
+    <button
+      type="button"
+      aria-label="Move up"
+      className="col-start-2 row-start-1 flex h-12 w-12 items-center justify-center rounded-lg border-2 border-white/30 bg-[#30363f]/95 text-white active:bg-cyan-500/80"
+      onContextMenu={(event) => event.preventDefault()}
+      onPointerDown={(event) => {
+        event.preventDefault();
+        event.currentTarget.setPointerCapture(event.pointerId);
+        setKeys((value) => ({ ...value, arrowup: true }));
+      }}
+      onPointerUp={() =>
+        setKeys((value) => ({ ...value, arrowup: false }))
+      }
+      onPointerCancel={() =>
+        setKeys((value) => ({ ...value, arrowup: false }))
+      }
+      onLostPointerCapture={() =>
+        setKeys((value) => ({ ...value, arrowup: false }))
+      }
+    >
+      ▲
+    </button>
+
+    {/* LEFT */}
+    <button
+      type="button"
+      aria-label="Move left"
+      className="col-start-1 row-start-2 flex h-12 w-12 items-center justify-center rounded-lg border-2 border-white/30 bg-[#30363f]/95 text-white active:bg-cyan-500/80"
+      onContextMenu={(event) => event.preventDefault()}
+      onPointerDown={(event) => {
+        event.preventDefault();
+        event.currentTarget.setPointerCapture(event.pointerId);
+        setKeys((value) => ({ ...value, arrowleft: true }));
+      }}
+      onPointerUp={() =>
+        setKeys((value) => ({ ...value, arrowleft: false }))
+      }
+      onPointerCancel={() =>
+        setKeys((value) => ({ ...value, arrowleft: false }))
+      }
+      onLostPointerCapture={() =>
+        setKeys((value) => ({ ...value, arrowleft: false }))
+      }
+    >
+      ◀
+    </button>
+
+    {/* RIGHT */}
+    <button
+      type="button"
+      aria-label="Move right"
+      className="col-start-3 row-start-2 flex h-12 w-12 items-center justify-center rounded-lg border-2 border-white/30 bg-[#30363f]/95 text-white active:bg-cyan-500/80"
+      onContextMenu={(event) => event.preventDefault()}
+      onPointerDown={(event) => {
+        event.preventDefault();
+        event.currentTarget.setPointerCapture(event.pointerId);
+        setKeys((value) => ({ ...value, arrowright: true }));
+      }}
+      onPointerUp={() =>
+        setKeys((value) => ({ ...value, arrowright: false }))
+      }
+      onPointerCancel={() =>
+        setKeys((value) => ({ ...value, arrowright: false }))
+      }
+      onLostPointerCapture={() =>
+        setKeys((value) => ({ ...value, arrowright: false }))
+      }
+    >
+      ▶
+    </button>
+
+    {/* DOWN */}
+    <button
+      type="button"
+      aria-label="Move down"
+      className="col-start-2 row-start-3 flex h-12 w-12 items-center justify-center rounded-lg border-2 border-white/30 bg-[#30363f]/95 text-white active:bg-cyan-500/80"
+      onContextMenu={(event) => event.preventDefault()}
+      onPointerDown={(event) => {
+        event.preventDefault();
+        event.currentTarget.setPointerCapture(event.pointerId);
+        setKeys((value) => ({ ...value, arrowdown: true }));
+      }}
+      onPointerUp={() =>
+        setKeys((value) => ({ ...value, arrowdown: false }))
+      }
+      onPointerCancel={() =>
+        setKeys((value) => ({ ...value, arrowdown: false }))
+      }
+      onLostPointerCapture={() =>
+        setKeys((value) => ({ ...value, arrowdown: false }))
+      }
+    >
+      ▼
+    </button>
   </div>
 )}
-  {/* UP */}
-  <button
-    type="button"
-    aria-label="Move up"
-    className="col-start-2 row-start-1 flex h-12 w-12 items-center justify-center rounded-lg border-2 border-white/30 bg-[#30363f]/95 text-white active:bg-cyan-500/80"
-    onPointerDown={(event) => {
-      event.preventDefault();
-      event.currentTarget.setPointerCapture(event.pointerId);
-      setKeys((value) => ({ ...value, arrowup: true }));
-    }}
-    onPointerUp={() =>
-      setKeys((value) => ({ ...value, arrowup: false }))
-    }
-    onPointerCancel={() =>
-      setKeys((value) => ({ ...value, arrowup: false }))
-    }
-    onLostPointerCapture={() =>
-      setKeys((value) => ({ ...value, arrowup: false }))
-    }
-  >
-    ▲
-  </button>
 
-  {/* LEFT */}
-  <button
-    type="button"
-    aria-label="Move left"
-    className="col-start-1 row-start-2 flex h-12 w-12 items-center justify-center rounded-lg border-2 border-white/30 bg-[#30363f]/95 text-white active:bg-cyan-500/80"
-    onPointerDown={(event) => {
-      event.preventDefault();
-      event.currentTarget.setPointerCapture(event.pointerId);
-      setKeys((value) => ({ ...value, arrowleft: true }));
-    }}
-    onPointerUp={() =>
-      setKeys((value) => ({ ...value, arrowleft: false }))
-    }
-    onPointerCancel={() =>
-      setKeys((value) => ({ ...value, arrowleft: false }))
-    }
-    onLostPointerCapture={() =>
-      setKeys((value) => ({ ...value, arrowleft: false }))
-    }
-  >
-    ◀
-  </button>
-
-  {/* CENTER */}
-  <div className="col-start-2 row-start-2 flex h-12 w-12 items-center justify-center rounded-lg bg-black/40 text-xs font-bold text-white/50">
-    +
-  </div>
-
-  {/* RIGHT */}
-  <button
-    type="button"
-    aria-label="Move right"
-    className="col-start-3 row-start-2 flex h-12 w-12 items-center justify-center rounded-lg border-2 border-white/30 bg-[#30363f]/95 text-white active:bg-cyan-500/80"
-    onPointerDown={(event) => {
-      event.preventDefault();
-      event.currentTarget.setPointerCapture(event.pointerId);
-      setKeys((value) => ({ ...value, arrowright: true }));
-    }}
-    onPointerUp={() =>
-      setKeys((value) => ({ ...value, arrowright: false }))
-    }
-    onPointerCancel={() =>
-      setKeys((value) => ({ ...value, arrowright: false }))
-    }
-    onLostPointerCapture={() =>
-      setKeys((value) => ({ ...value, arrowright: false }))
-    }
-  >
-    ▶
-  </button>
-
-  {/* DOWN */}
-  <button
-    type="button"
-    aria-label="Move down"
-    className="col-start-2 row-start-3 flex h-12 w-12 items-center justify-center rounded-lg border-2 border-white/30 bg-[#30363f]/95 text-white active:bg-cyan-500/80"
-    onPointerDown={(event) => {
-      event.preventDefault();
-      event.currentTarget.setPointerCapture(event.pointerId);
-      setKeys((value) => ({ ...value, arrowdown: true }));
-    }}
-    onPointerUp={() =>
-      setKeys((value) => ({ ...value, arrowdown: false }))
-    }
-    onPointerCancel={() =>
-      setKeys((value) => ({ ...value, arrowdown: false }))
-    }
-    onLostPointerCapture={() =>
-      setKeys((value) => ({ ...value, arrowdown: false }))
-    }
-  >
-    ▼
-  </button>
-</div>
 
 
 
