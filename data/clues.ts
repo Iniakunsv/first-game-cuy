@@ -19,7 +19,7 @@ export const clues: Clue[] = [
     title: 'A Hidden Letter',
     text:
       'Before giving treatment, a healthcare worker must show responsibility and attention. Think of a four-letter word related to this action. One letter is hidden here.',
-    letter: 'A',
+    letter: 'S',
   },
 
   {
@@ -29,7 +29,7 @@ export const clues: Clue[] = [
     title: 'A Hidden Letter',
     text:
       'A patient needs attention, support, and concern. Think of the English word commonly used for this action. One letter is hidden here.',
-    letter: 'R',
+    letter: 'K',
   },
 
   {
@@ -39,7 +39,7 @@ export const clues: Clue[] = [
     title: 'A Hidden Letter',
     text:
       'A healthcare worker gives attention and support to a patient. Think carefully about the word that describes this action. One letter is hidden here.',
-    letter: 'E',
+    letter: 'I',
   },
 
       /*
@@ -51,11 +51,11 @@ export const clues: Clue[] = [
   {
     id: 'layout2-clue-student-desk',
     layout: 2,
-    objectId: 'l2_table_left',
+    objectId: 'l2_wall_decoration_upper',
     title: 'A Hidden Letter',
     text:
       'You found something hidden around the student desk. Save these two letters. They may be useful later.',
-    letter: 'MI',
+    letter: 'RC',
   },
 
   {
@@ -65,7 +65,7 @@ export const clues: Clue[] = [
     title: 'A Hidden Letter',
     text:
       'You found something hidden behind the left curtain. Save these two letters. They may be useful later.',
-    letter: 'NE',
+    letter: 'OY',
   },
 
   {
@@ -75,7 +75,7 @@ export const clues: Clue[] = [
     title: 'A Hidden Letter',
     text:
       'You found something hidden behind the right curtain. Save these two letters. They may be useful later.',
-    letter: 'DC',
+    letter: 'VE',
   },
 
   {
@@ -85,7 +85,7 @@ export const clues: Clue[] = [
     title: 'A Hidden Letter',
     text:
       'You found something hidden in the dark decoration. Save these two letters. They may be useful later.',
-    letter: 'EI',
+    letter: 'ER',
   },
 
 ];

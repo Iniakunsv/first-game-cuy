@@ -20,12 +20,12 @@ export const challenges: Challenge[] = [
     ],
 
     question:
-      'The process of giving attention, kindness, and support to someone or something to keep them safe, healthy, and well.',
+      'A condition in which a person is not healthy and may experience symptoms such as fever, pain, or weakness.',
 
-    answer: 'CARE',
+    answer: 'SICK',
 
     explanation:
-      'The keyword is CARE. It describes the attention and concern given to a patient.',
+      'Sick is a condition in which a person is not feeling well or has an illness. A sick person may experience symptoms such as fever, headache, cough, pain, or weakness.',
 
     type: 'short-answer',
   },
