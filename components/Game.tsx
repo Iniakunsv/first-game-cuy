@@ -805,7 +805,7 @@ const resetGame =
 
 
       if (
-        answer !== 'medicine'
+        answer !== 'recovery'
       ) {
 
         setFakeMessage(
@@ -3995,7 +3995,7 @@ if (gameOver) {
 
                       <p className="text-center text-sm font-bold leading-relaxed text-slate-200">
 
-                        A substance or preparation used to prevent, diagnose, manage, or treat diseases and other medical conditions, often by affecting specific processes within the body.
+                        The process of getting better after an illness, injury, or medical treatment. In nursing, nurses support patients during recovery by providing proper care, monitoring their health conditions, and helping them regain their strength.
 
                       </p>
 
