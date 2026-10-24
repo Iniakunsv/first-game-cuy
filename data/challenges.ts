@@ -35,19 +35,20 @@ export const challenges: Challenge[] = [
     layout: 1,
 
     question:
-      'Nurses ___ wash their hands before treating a patient.',
+      'Before giving medication to a patient, a nurse _____ check the patient\'s identity and verify the prescribed dosage to prevent medication errors.',
 
     options: [
       'might',
       'must',
       'could',
       'would',
+      'may',
     ],
 
     answer: 1,
 
     explanation:
-      'Must is used because hand hygiene is an essential requirement before treating a patient.',
+      'CORRECT!',
 
     type: 'multiple-choice',
   },
@@ -57,19 +58,20 @@ export const challenges: Challenge[] = [
     layout: 1,
 
     question:
-      'The patient ___ feel dizzy after taking the medicine.',
+      'A patient has a high fever, a persistent cough, and difficulty breathing. The nurse thinks these symptoms _____ indicate a serious respiratory infection.',
 
     options: [
-      'must',
-      'should',
-      'shall',
+      'mustn\'t',
+      'have to',
       'might',
+      'will',
+      'can',
     ],
 
-    answer: 3,
+    answer: 2,
 
     explanation:
-      'Might expresses possibility. The patient may possibly feel dizzy after taking the medicine.',
+      'CORRECT!',
 
     type: 'multiple-choice',
   },
@@ -79,19 +81,20 @@ export const challenges: Challenge[] = [
     layout: 1,
 
     question:
-      'You ___ drink plenty of water when you have a fever.',
+      'During a sterile procedure, nurses _____ touch sterile instruments with unsterile gloves because this can contaminate the equipment and increase the risk of infection.',
 
     options: [
       'should',
-      'might',
-      'would',
       'can',
+      'might',
+      'mustn\'t',
+      'will',
     ],
 
-    answer: 0,
+    answer: 3,
 
     explanation:
-      'Should is used to give advice or a recommendation.',
+      'CORRECT!',
 
     type: 'multiple-choice',
   },
@@ -101,19 +104,20 @@ export const challenges: Challenge[] = [
     layout: 1,
 
     question:
-      'A nurse ___ check the patient\'s temperature.',
+      'After several weeks of clinical training, the nursing student _____ measure blood pressure accurately and record the results in the patient\'s medical chart.',
 
     options: [
       'can',
-      'would',
-      'might',
-      'must not',
+      'mustn\'t',
+      'might not',
+      'will have to',
+      'shouldn\'t',
     ],
 
     answer: 0,
 
     explanation:
-      'Can is appropriate because checking a patient\'s temperature is an ability or permitted nursing action.',
+      'CORRECT!',
 
     type: 'multiple-choice',
   },
@@ -123,19 +127,20 @@ export const challenges: Challenge[] = [
     layout: 1,
 
     question:
-      'Patients ___ follow the doctor\'s instructions carefully.',
+      'The nurse has explained the discharge instructions to the patient. Tomorrow, she _____ contact the patient to check their recovery progress and answer any questions.',
 
     options: [
-      'could',
-      'may',
-      'ought to',
-      'would',
+      'could have',
+      'mustn\'t',
+      'will',
+      'might not',
+      'can\'t',
     ],
 
     answer: 2,
 
     explanation:
-      'Ought to expresses advice or a strong recommendation.',
+      'CORRECT!',
 
     type: 'multiple-choice',
   },
@@ -152,19 +157,20 @@ export const challenges: Challenge[] = [
     layout: 1,
 
     question:
-      '___ I help you get out of bed, Mrs. Smith?',
+      'A patient with diabetes is scheduled for a blood glucose test before breakfast. The nurse _____ follow the hospital\'s testing protocol and document the result accurately.',
 
     options: [
-      'Must',
-      'Shall',
-      'Might',
-      'Could',
+      'may',
+      'must',
+      'could',
+      'might',
+      'would',
     ],
 
     answer: 1,
 
     explanation:
-      'Shall can be used politely when offering help or suggesting an action.',
+      'CORRECT!',
 
     type: 'multiple-choice',
   },
@@ -174,19 +180,20 @@ export const challenges: Challenge[] = [
     layout: 1,
 
     question:
-      'You ___ take this medicine before eating unless the doctor says otherwise.',
+      'A nurse notices that an elderly patient feels dizzy when standing up from the bed. The nurse thinks the patient _____ need assistance when walking to prevent a possible fall.',
 
     options: [
-      'should not',
-      'can',
-      'would',
+      'mustn\'t',
+      'can\'t',
       'might',
+      'won\'t',
+      'shouldn\'t',
     ],
 
-    answer: 0,
+    answer: 2,
 
     explanation:
-      'Should not expresses advice against taking the medicine before eating.',
+      'CORRECT!',
 
     type: 'multiple-choice',
   },
@@ -196,19 +203,20 @@ export const challenges: Challenge[] = [
     layout: 1,
 
     question:
-      'The nurse ___ monitor the patient\'s blood pressure every four hours.',
+      'In the hospital\'s isolation room, visitors _____ enter without following the required infection-control precautions, including wearing the appropriate personal protective equipment.',
 
     options: [
+      'can',
+      'may',
+      'should',
+      'mustn\'t',
       'will',
-      'might',
-      'could',
-      'would',
     ],
 
-    answer: 0,
+    answer: 3,
 
     explanation:
-      'Will is appropriate for a planned or expected nursing action.',
+      'CORRECT!',
 
     type: 'multiple-choice',
   },
@@ -218,19 +226,20 @@ export const challenges: Challenge[] = [
     layout: 1,
 
     question:
-      '___ you like some water, Mr. Shiba?',
+      'Before working independently in the emergency department, a nursing student must demonstrate that they _____ perform basic life support correctly under appropriate clinical supervision.',
 
     options: [
-      'Must',
-      'Would',
-      'Should',
-      'Shall',
+      'can',
+      'mustn\'t',
+      'might not',
+      'will not',
+      'shouldn\'t',
     ],
 
-    answer: 1,
+    answer: 0,
 
     explanation:
-      'Would you like...? is a polite way to offer something to a patient.',
+      'CORRECT!',
 
     type: 'multiple-choice',
   },
@@ -240,19 +249,20 @@ export const challenges: Challenge[] = [
     layout: 1,
 
     question:
-      'The patient ___ have an infection because his temperature is very high.',
+      'The hospital is introducing a new electronic medical record system next month. All nurses _____ attend a training session so they can use the system safely and accurately.',
 
     options: [
-      'would',
-      'should',
-      'might',
-      'can',
+      'might not',
+      'can\'t',
+      'mustn\'t',
+      'could',
+      'will have to',
     ],
 
-    answer: 2,
+    answer: 4,
 
     explanation:
-      'Might expresses possibility because the high temperature suggests, but does not prove, an infection.',
+      'CORRECT!',
 
     type: 'multiple-choice',
   },
