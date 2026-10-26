@@ -631,7 +631,8 @@ export const challenges: Challenge[] = [
     options: [
       'SURGERY',
       'AFTER',
-      'THE PATIENT',
+      'THE',
+      'PATIENT',
       'REST',
       'SHOULD',
     ],
@@ -656,9 +657,10 @@ export const challenges: Challenge[] = [
     options: [
       'EXPERIENCE',
       'MIGHT',
+      'PATIENT',
       'SOME',
       'DIZZINESS',
-      'THE PATIENT',
+      'THE',
     ],
 
     answer: 'The patient might experience some dizziness',
@@ -681,10 +683,12 @@ export const challenges: Challenge[] = [
     options: [
       'CHECK',
       'SHOULD',
+      'THE',
       'NURSES',
-      'BLOOD PRESSURE',
+      'PRESSURE',
       'REGULARLY',
-      'THE PATIENT\'S',
+      'PATIENT\'S',
+      'BLOOD',
     ],
 
     answer: 'Nurses should check the patient\'s blood pressure regularly',
@@ -707,10 +711,13 @@ export const challenges: Challenge[] = [
     options: [
       'WEAR',
       'YOU',
-      'PROTECTIVE EQUIPMENT',
+      'PROTECTIVE',
       'MUST',
-      'THE TREATMENT ROOM',
+      'EQUIPMENT',
+      'TREATMENT',
+      'THE',
       'IN',
+      'ROOM',
     ],
 
     answer: 'You must wear protective equipment in the treatment room',
